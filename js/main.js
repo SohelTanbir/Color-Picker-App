@@ -34,11 +34,20 @@ colorItemElements.forEach((colorItem, key )=>{
     })
 })
 // copy color code from display color plate
-rgb_icon.addEventListener("click", ()=>{
-    copyToClipboard(rgb_code.innerText);
-})
 hex_icon.addEventListener("click", ()=>{
     copyToClipboard(hex_code.innerText);
+    hex_code.innerHTML = "Copied!";
+    setTimeout(()=>{
+        navigator.clipboard.readText().then(code =>  hex_code.innerHTML = code)
+    },500)
+})
+
+rgb_icon.addEventListener("click", ()=>{
+    copyToClipboard(rgb_code.innerText);
+    rgb_code.innerHTML = "Copied!";
+    setTimeout(()=>{
+        navigator.clipboard.readText().then(code =>  rgb_code.innerHTML = code)
+    },500)
 })
 // copy color code to clipboard
 function copyToClipboard(colorCode){
