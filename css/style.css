@@ -42,12 +42,14 @@ img{
 
 /*output color container*/
 #output-container {
+    width: 20%;
     position: fixed;
     width: 200px;
     height: 150px;
     padding: 5px;
     right: 2%;
     top: 28%;
+    background: #fff;
     border: 1px solid #e2e2e2;
 }
 .display-color{
@@ -81,6 +83,9 @@ img{
 }
 
 /*color items*/
+.color-item-container{
+    width: 70%;
+}
 .color-container{
     width: 80%;
     margin: 0 auto;
