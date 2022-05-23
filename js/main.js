@@ -4,7 +4,7 @@ const rgb_code = document.getElementById("rgb_code");
 const hex_code = document.getElementById("hex_code");
 const rgb_icon = document.getElementById("rgb_icon");
 const hex_icon = document.getElementById("hex_icon");
-
+const displayColor = document.querySelector(".display-color");
 // addEvent Lister on color-item element
 colorItemElements.forEach((colorItem, key )=>{
     colorItem.addEventListener("click", ()=>{
@@ -17,11 +17,14 @@ colorItemElements.forEach((colorItem, key )=>{
         // get background color of HTML Element
         const rgbColorCode = window.getComputedStyle(colorItem).backgroundColor;
 
+       
         // call rgbTohex coverter function
         const hexColorCode = rgb2hex(rgbColorCode);
         //show HEX color code in UI
         hex_code.innerText = hexColorCode;
-        
+          // set display background color after user copy any color code
+          displayColor.style.backgroundColor =hexColorCode;
+
         //call the copyToClipboard function
         copyToClipboard(hexColorCode);
 
