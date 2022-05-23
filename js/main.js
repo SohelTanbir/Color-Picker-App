@@ -33,7 +33,13 @@ colorItemElements.forEach((colorItem, key )=>{
         })
     })
 })
-
+// copy color code from display color plate
+rgb_icon.addEventListener("click", ()=>{
+    copyToClipboard(rgb_code.innerText);
+})
+hex_icon.addEventListener("click", ()=>{
+    copyToClipboard(hex_code.innerText);
+})
 // copy color code to clipboard
 function copyToClipboard(colorCode){
     navigator.clipboard.writeText(colorCode);
