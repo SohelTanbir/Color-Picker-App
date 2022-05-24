@@ -66,7 +66,7 @@ img{
     align-content: space-between;
     flex-wrap: wrap;
     border: 1px solid #e2e2e2;
-    padding: 7px;   
+    padding: 9px 5px;   
     margin: 5px 0;
 }
 .hex-color p,
@@ -133,7 +133,7 @@ img{
 .color-item:nth-child(21){ background-color: #cac061;}
 .color-item:nth-child(22){ background-color: #c8ff00;}
 .color-item:nth-child(23){ background-color: #ff9e9e;}
-.color-item:nth-child(24){ background-color: #006eff57;}
+.color-item:nth-child(24){ background-color: #9ed3ff;}
 .color-item:nth-child(25){ background-color: #334857;}
 .color-item:nth-child(26){ background-color: #18c05e;}
 .color-item:nth-child(27){ background-color: #00c3ff;}

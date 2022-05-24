@@ -8,7 +8,6 @@ const displayColor = document.querySelector(".display-color");
 // addEvent Lister on color-item element
 colorItemElements.forEach((colorItem, key )=>{
     colorItem.addEventListener("click", ()=>{
-      
         // replace inner text of the child element and play a beep sound
         colorItem.children[0].innerHTML = "Copied!";
         const audio = new Audio("../audio/beep-08b.mp3");
@@ -61,7 +60,6 @@ function copyToClipboard(colorCode){
 // convert RGB color to Hex color code 
 function rgb2hex(rgb) {
     rgb = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+))?\)$/);
-    console.log(rgb);
     function hex(x) {
         return ("0" + parseInt(x).toString(16)).slice(-2);
     }
